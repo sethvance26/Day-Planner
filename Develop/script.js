@@ -1,5 +1,5 @@
 var timeDisplayEl = $('#time-display');
-const saveBtn = document.getElementById('btn');
+var saveBtn = document.getElementById('btn');
 
 
 
@@ -9,15 +9,48 @@ function displayTime() {
   }
   setInterval(displayTime, 1000);
 
-function renderInputs() {
-    var inputField = localStorage.getElementById('inputField');
+
+
+
+
+$(".time-block").each(function() {
+
+var hour = parseInt($(this).data().number);
+
+var currentTime = parseInt(moment().format("HH"))
+
+    if(currentTime > hour){
+        $(this).addClass("past");
+    }  else if (currentTime < hour){
+        $(this).addClass("future");
+    } else {
+        $(this).addClass("present");
+    }
+    console.log(this);
+});
+
+
+
+//////////////////////
+
+function writeNotes() {
+    console.log('Please');
+    var inputField = localStorage.getItem("inputField");
+    var hello = $(hello);
     if (!inputField) {
         return;
     }
 
-    inputField.textContent = inputField;
+hello.textContent= inputField.value;
 
 }
+ let userNotes = localStorage.getItem("inputField");
+ console.log(inputField);
+
+$('.saveBtn').on("click", function () {
+    console.log($(this).siblings(".description")[0].value);
+    var userNotes = $(this).siblings(".form-control").val();
+});
 
 saveBtn.addEventListener('click', function(event) {
     event.preventDefault();
@@ -32,7 +65,8 @@ saveBtn.addEventListener('click', function(event) {
 
     
     localStorage.setItem("inputField", inputField);
-
-    renderInputs();
+    
     }
+    console.log('working!');
 });
+
