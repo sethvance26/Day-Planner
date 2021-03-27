@@ -1,6 +1,6 @@
 var timeDisplayEl = $('#time-display');
 var saveBtn = document.getElementById('btn');
-
+var userTextInput = document.querySelector("#inputField");
 
 
 function displayTime() {
@@ -8,7 +8,7 @@ function displayTime() {
     timeDisplayEl.text(rightNow);
   }
   setInterval(displayTime, 1000);
-
+  renderMessage();
 
 
 
@@ -33,23 +33,18 @@ var currentTime = parseInt(moment().format("HH"))
 
 //////////////////////
 
-function writeNotes() {
-    console.log('Please');
-    var inputField = localStorage.getItem("inputField");
-    var hello = $(hello);
-    if (!inputField) {
-        return;
-    }
+function renderMessage() {
+    console.log('testing')
+    var userInput = localStorage.getItem("inputField")
 
-hello.textContent= inputField.value;
-
+    userTextInput.textContent = userInput;
 }
- let userNotes = localStorage.getItem("inputField");
- console.log(inputField);
+
+////////////////////////////////////////////////////////////////
+
 
 $('.saveBtn').on("click", function () {
     console.log($(this).siblings(".description")[0].value);
-    var userNotes = $(this).siblings(".form-control").val();
 });
 
 saveBtn.addEventListener('click', function(event) {
