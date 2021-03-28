@@ -1,4 +1,4 @@
-# Day-Planner!
+# Javascript-Password-Generator
 
 ## Task At Hand
 
