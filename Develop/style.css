@@ -5,6 +5,8 @@ body {
   background: url("stuff.jpg");
 }
 
+/* I added my background in the styling above. */
+
 textarea {
   background: transparent;
   border: none;
@@ -76,3 +78,4 @@ textarea {
   margin-bottom: 0px;
   height:70px;
 }
+/* I added a class here for form-group to make the spacing between them closer. */

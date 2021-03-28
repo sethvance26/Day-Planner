@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
     />
     <link
       rel="stylesheet"
@@ -18,6 +18,7 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
+    <!-- Above is where our API's are linked up! -->
     <link rel="stylesheet" href="style.css" />
     <title>Work Day Scheduler</title>
   </head>
@@ -30,57 +31,60 @@
       <p id="currentDay" class="lead"></p>
     </header>
     
-    
-    
-  <div class="form-group green-border-focus row time-block " data-number="09">
+    <!-- Below I created divs for each hour, and most of the classes applied are from Bootstrap. -->
+    <!-- I also applied almost every style from our existing stylesheet in the divs, to get a similar look as the example. -->
+  <div class="form-group row time-block " data-number="09">
     <div class="col-md-1 hour">9AM</div>
-      <textarea id="inputField" class="col-md-10 form-control description"></textarea>
-      <button id="btn" class="btn saveBtn col-md-1"><i class ="fas fa-save"></i></button>
+      <textarea id="inputField" class="col-md-10 form-control description"></textarea> 
+      <!-- In textarea, we created an ID of inputField so we can reference this later in the js file.
+      This ID is on every textarea element below. -->
+      <button id="btn" class="btn saveBtn col-md-1"><i class ="fas fa-save"></i></button> 
     </div>
 
-  <div class="form-group green-border-focus row time-block" data-number="10">
+  <div class="form-group row time-block" data-number="10">
   <div class="col-md-1 hour">10AM</div>
     <textarea  id="inputField"class="col-md-10 form-control description"></textarea>
     <button id="btn" class="btn saveBtn col-md-1"><i class ="fas fa-save"></i></button>
   </div>
   
-  <div class="form-group green-border-focus row time-block" data-number="11">
+  <div class="form-group row time-block" data-number="11">
   <div class="col-md-1 hour">11AM</div>
     <textarea id="inputField" class="col-md-10 form-control description"></textarea>
     <button id='btn' class="btn saveBtn col-md-1"><i class ="fas fa-save"></i></button>
   </div>
 
-  <div class="form-group green-border-focus row time-block" data-number="12">
+  <div class="form-group  row time-block" data-number="12"> 
+    <!-- We also gave the first div in each line a data-number so we can reference each line for the current time.  -->
   <div class="col-md-1 hour">12PM</div>
     <textarea id="inputField" class="col-md-10 form-control description"></textarea>
     <button id='btn' class="btn saveBtn col-md-1"><i class ="fas fa-save"></i></button>
   </div>
 
-  <div class="form-group green-border-focus row time-block" data-number="13">
+  <div class="form-group row time-block" data-number="13">
   <div class="col-md-1 hour">1PM</div>
     <textarea id="inputField" class="col-md-10 form-control description"></textarea>
     <button id='btn' class="btn saveBtn col-md-1"><i class ="fas fa-save"></i></button>
   </div>
 
-  <div class="form-group green-border-focus row time-block" data-number="14">
+  <div class="form-group row time-block" data-number="14">
   <div class="col-md-1 hour">2PM</div>
     <textarea id="inputField" class="col-md-10 form-control description"></textarea>
     <button id='btn' class="btn saveBtn col-md-1"><i class ="fas fa-save"></i></button>
   </div>
 
-  <div class="form-group green-border-focus row time-block" data-number="15">
+  <div class="form-group row time-block" data-number="15">
   <div class="col-md-1 hour">3PM</div>
     <textarea id="inputField" class="col-md-10 form-control description"></textarea>
     <button id='btn' class="btn saveBtn col-md-1"><i class ="fas fa-save"></i></button>
   </div>
 
-  <div  class="form-group green-border-focus row time-block" data-number="16">
+  <div  class="form-group row time-block" data-number="16">
   <div class="col-md-1 hour">4PM</div>
     <textarea id="inputField" class="col-md-10 form-control description"></textarea>
     <button id='btn' class="btn saveBtn col-md-1"><i class ="fas fa-save"></i></button>
   </div>
 
-  <div  class="form-group green-border-focus row time-block" data-number="17">
+  <div  class="form-group row time-block" data-number="17">
   <div class="col-md-1 hour">5PM</div>
     <textarea id="inputField" class="col-md-10 form-control description"></textarea>
     <button id='btn' class="btn saveBtn col-md-1"><i class ="fas fa-save"></i></button>
@@ -92,5 +96,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src=script.js></script>
+    <!-- Jquery and bootstrap are connected here! -->
   </body>
 </html>
